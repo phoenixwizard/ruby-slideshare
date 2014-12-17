@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["eddy@nixonmcinnes.co.uk"]
   s.homepage    = ""
   s.summary     = %q{Wrapper for the Slideshare API}
-  s.description = %q{Wrapper for the Slideshare API}
+  s.description = %q{Wrapper for the Slideshare API - NOTE: This is a fork of github.com/nixmc/Super-Mega-Slideshare}
 
   s.rubyforge_project = s.name
 
