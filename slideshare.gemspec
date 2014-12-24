@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.name        = "ruby-slideshare"
   s.version     = Slideshare::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Edd Parris"]
-  s.email       = ["eddy@nixonmcinnes.co.uk"]
+  s.authors     = ["John-Alan Simmons"]
+  s.email       = ["johnalan@conferencecloud.co"]
   s.homepage    = ""
   s.summary     = %q{Wrapper for the Slideshare API}
   s.description = %q{Wrapper for the Slideshare API - NOTE: This is a fork of github.com/nixmc/Super-Mega-Slideshare}
@@ -19,13 +19,8 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  
-  s.post_install_message = "
-  ****************************************************************
-  Thank you for installing #{s.name}!
-  ****************************************************************
-  "
-  s.add_runtime_dependency('hashie', '~> 1.0.0')
+
+  s.add_runtime_dependency('hashie', '~> 3.3.2')
   s.add_runtime_dependency('faraday', '~> 0.5.4')
   s.add_runtime_dependency('faraday_middleware', '~> 0.3.2')
   s.add_runtime_dependency('nokogiri', '~> 1.6')
