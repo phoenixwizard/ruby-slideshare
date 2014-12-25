@@ -3,28 +3,29 @@ require 'faraday'
 # @private
 module Faraday
   # @private
-  class Request::Multipart < Faraday::Middleware
-    def call(env)
-      if env[:body].is_a?(Hash)
-        env[:body].each do |key, value|
-          if value.is_a?(File)
-            env[:body][key] = Faraday::UploadIO.new(value, mime_type(value), value.path)
-          end
-        end
-      end
+  # // phoenixwizard : I removed this code as it was vreaking and I do not need to post anything to slideshare.
+  # class Request::Multipart < Faraday::Middleware
+  #   def call(env)
+  #     if env[:body].is_a?(Hash)
+  #       env[:body].each do |key, value|
+  #         if value.is_a?(File)
+  #           env[:body][key] = Faraday::UploadIO.new(value, mime_type(value), value.path)
+  #         end
+  #       end
+  #     end
 
-      @app.call(env)
-    end
+  #     @app.call(env)
+  #   end
 
-    private
+  #   private
 
-    def mime_type(file)
-      case file.path
-        when /\.jpe?g/i then 'image/jpeg'
-        when /\.gif$/i then 'image/gif'
-        when /\.png$/i then 'image/png'
-        else 'application/octet-stream'
-      end
-    end
-  end
+  #   def mime_type(file)
+  #     case file.path
+  #       when /\.jpe?g/i then 'image/jpeg'
+  #       when /\.gif$/i then 'image/gif'
+  #       when /\.png$/i then 'image/png'
+  #       else 'application/octet-stream'
+  #     end
+  #   end
+  # end
 end
