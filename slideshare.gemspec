@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency('hashie', '~> 3.3')
-  s.add_runtime_dependency('faraday', '~> 0.9')
-  s.add_runtime_dependency('faraday_middleware', '~> 0.9')
+  s.add_runtime_dependency('faraday', '>= 0.9')
+  s.add_runtime_dependency('faraday_middleware', '>= 0.9')
   s.add_runtime_dependency('nokogiri', '~> 1.6')
-  s.add_runtime_dependency('multi_xml', '~> 0.2')
+  s.add_runtime_dependency('multi_xml', '>= 0.2')
 end
